@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/loading_view" />
+
+    <include layout="@layout/error_view" />
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <example.fussen.baselibrary.widget.weekview.WeekView
+            android:id="@+id/weekView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnGap="2dp"
+            app:dayBackgroundColor="#e8e8e8"
+            app:eventTextColor="@color/white"
+            app:eventTextSize="10sp"
+            app:firstDayOfWeek="sunday"
+            app:headerColumnBackground="@color/white"
+            app:headerColumnPadding="5dp"
+            app:headerColumnTextColor="#8f000000"
+            app:headerCowGap="20dp"
+            app:headerRowBackgroundColor="@color/white"
+            app:headerRowPadding="10dp"
+            app:horizontalFlingEnabled="false"
+            app:hourHeight="60dp"
+            app:hourSeparatorColor="@color/white"
+            app:hourSeparatorHeight="2dp"
+            app:noOfVisibleDays="7"
+            app:nowLineColor="@color/red"
+            app:nowLineThickness="1dp"
+            app:showNowLine="true"
+            app:textSize="12sp"
+            app:timeTextSize="12sp"
+            app:todayBackgroundColor="#e1ecf2"
+            app:todayHeaderTextColor="@color/white"
+            app:todayWeekLableTextColor="@color/app_color"
+            app:weekLableTextSize="14sp" />
+    </LinearLayout>
+
+</FrameLayout>
